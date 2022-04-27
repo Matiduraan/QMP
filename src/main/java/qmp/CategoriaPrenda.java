@@ -1,6 +1,6 @@
 package qmp;
 
-public enum categoriaPrenda {
+public enum CategoriaPrenda {
   PARTE_SUPERIOR,
   PARTE_INFERIOR,
   CALZADO,

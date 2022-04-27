@@ -11,8 +11,8 @@ public class main extends Application {
 
   @Override
   public void start(Stage primaryStage) {
-    tipoPrenda unTipo = new tipoPrenda("Camisa",categoriaPrenda.PARTE_SUPERIOR);
-    prenda unaPrenda = new prenda("Azul",null,"Lino",unTipo);
-    System.out.println(unaPrenda.categoria());
+    //TipoPrenda unTipo = new TipoPrenda(CategoriaPrenda.PARTE_SUPERIOR);
+    //prenda unaPrenda = new prenda("Azul",null,"Lino",unTipo);
+    //System.out.println(unaPrenda.categoria());
   }
 }
