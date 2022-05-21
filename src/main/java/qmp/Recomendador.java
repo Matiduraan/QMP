@@ -8,9 +8,10 @@ public class Recomendador {
   public String ciudad;
   public ServicioDelClima servicioUtilizado;
 
-  public Recomendador(List<Prenda> guardarropas, String ciudad) {
+  public Recomendador(List<Prenda> guardarropas, String ciudad, ServicioDelClima servicioDelClima) {
     this.guardarropas = guardarropas;
     this.ciudad = ciudad;
+    this.servicioUtilizado = servicioDelClima;
   }
 
   public Atuendo recomendar(){
