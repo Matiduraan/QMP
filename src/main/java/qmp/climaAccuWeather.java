@@ -5,6 +5,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class climaAccuWeather implements ServicioDelClima {
   private AccuWeatherAPI accuWeatherAPI;
@@ -34,4 +35,11 @@ public class climaAccuWeather implements ServicioDelClima {
   private boolean climaVencido(){
     return LocalDate.now().isAfter(fechaDeVencimiento);
   }
+
+  @Override
+  public List<AlertaMeteorologica> getAlertasActuales(String ciudad) {
+    List<String> alertas = (List<String>)accuWeatherAPI.getAlertas(ciudad).get("CurrentAlerts");
+    return alertas.stream().map(alerta -> AlertaMeteorologica.valueOf(alerta)).collect(Collectors.toList());
+  }
+
 }

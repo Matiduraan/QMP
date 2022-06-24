@@ -15,6 +15,10 @@ public class Guardarropas {
     this.duenos = duenos;
   }
 
+  public List<Prenda> getPrendas() {
+    return prendas;
+  }
+
   public void agregarNuevoDueno(Usuario nuevoDueno){
     duenos.add(nuevoDueno);
   }

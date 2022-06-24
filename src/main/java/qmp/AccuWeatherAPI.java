@@ -20,4 +20,10 @@ public final class AccuWeatherAPI {
       }});
     }});
   }
+
+  public final Map<String, Object> getAlertas(String ciudad) {
+    Map<String, Object> alertas =  new HashMap<String, Object>();
+    alertas.put("CurrentAlerts", Arrays.asList("NIEVE", "GRANIZO", "LLUVIA"));
+    return  alertas;
+  }
 }
