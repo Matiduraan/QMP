@@ -1,8 +1,6 @@
 package qmp;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
 
 public class Uniforme {
   public Prenda parteSuperior;
@@ -21,7 +19,4 @@ public class Uniforme {
     Prenda calzado = prendasDisponibles.stream().filter(prenda -> prenda.categoria() == CategoriaPrenda.CALZADO).findAny().orElseThrow(()-> new Exception("No hay calzados disponibles"));
     return new Uniforme(parteSuperior,parteInferior,calzado);
   }
-
-  public static final Uniforme uniformeSanJuan = new Uniforme(Prenda.chombaPique,Prenda.pantalonAcetatoGris,Prenda.zapatillasBlancas);
-  public static final Uniforme institutoJohnson = new Uniforme(Prenda.camisaBlanca,Prenda.pantalonDeVestirNegro,Prenda.zapatosNegros);
 }
